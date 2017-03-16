@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Angular JS Controller</title>
+</head>
+<body>
+<h2>AngularJS Sample Application</h2>
+<div ng-app="" ng-controller="studentscontrol">
+
+
+
+<table border="3">
+    <tr>
+
+    <td>Enter firstname<input type="text" ng-model="name"  required></td>
+    <td>Enter lastname<input type="text" ng-model="last"></td>
+    <td>Enter fees<input type="text" ng-model="fee"></td>
+    <td>Enter subject<input type="text" ng-model="students.sub"></td>
+    <h1>{{students.last}}</h1>
+    <p>{{students.name}}+{{students.last}} fee is {{students.fee |currency}}+ and subject is + {{students.sub}} </p>
+    </tr>
+    <tr>
+
+
+    </tr>
+    </table>
+
+    <button ng-click="reset()">Reset</button>
+    </div>
+  <script>
+  function studentscontrol($scope){
+
+ $scope.reset = function(){
+ $scope.name = "Mahesh";
+ $scope.last = "Parashar";
+
+ }
+ $scope.reset();
+    }
+    </script>
+
+    <script
+src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/
+angular.min.js">
+</script>
+    </body>
+
+</html>
